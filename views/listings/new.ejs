@@ -1,0 +1,87 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+    <h3>List ur Place here :</h3>
+    <br>
+    <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" name="listing[title]" id="title" class="form-control" required>
+            <!-- <div class="valid-feedback">
+                Valid title
+            </div> -->
+            <div class="invalid-feedback">
+                Please provide valid title
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="category" class="form-label">Category:</label>
+            <!-- <input type="text" name="listing[title]" id="title" class="form-control" required> -->
+            <select name="listing[category]" id="category" class="form-control" required>
+                <option value="" selected>--select the category--</option>
+                <option value="rooms">Rooms</option>
+                <option value="iconic-cities">Iconic cities</option>
+                <option value="mountains">Mountains</option>
+                <option value="castles">Castles</option>
+                <option value="amazing-pools">Amazing pools</option>
+                <option value="camping">Camping</option>
+                <option value="farms">Farms</option>
+                <option value="arctic">Arctic</option>
+                <option value="domes">Domes</option>
+                <option value="boats">Boats</option>
+            </select>
+            <div class="invalid-feedback">
+                Please provide valid category
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <textarea name="listing[description]" id="description" cols="30" rows="10" class="form-control" required></textarea>
+            <div class="invalid-feedback">
+                Description should be smaller
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="img" class="form-label">Upload an Image:</label>
+            <input type="file" name="listing[image]" id="img" class="form-control" required>
+            <div class="invalid-feedback">
+                Please upload an image
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" name="listing[price]" id="price" class="form-control" required>
+            <div class="invalid-feedback">
+                Please provide valid price
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="location" class="form-label">Location:</label>
+                <input type="text" name="listing[location]" id="location" class="form-control" required>
+                <div class="invalid-feedback">
+                    Please provide valid location
+                </div>
+            </div>
+
+            <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">Country:</label>
+                <input type="text" name="listing[country]" id="country" class="form-control" required>
+                <div class="invalid-feedback">
+                    Please provide valid country
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-dark add-btn mt-3">Add</button>
+        <br>
+        <br>
+        <br>
+    </form>
+    </div>
+</div>
