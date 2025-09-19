@@ -72,7 +72,7 @@ views/                  # EJS templates
    node app.js
    ```
 
-6. Visit `http://localhost:3000` in your browser.
+6. Visit `http://localhost:8080` in your browser.
 
 ## Folder Details
 
